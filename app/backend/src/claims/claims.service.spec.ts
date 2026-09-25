@@ -77,6 +77,7 @@ describe('ClaimsService', () => {
     incrementOnchainOperation: jest.fn(),
     recordOnchainDuration: jest.fn(),
     incrementCounter: jest.fn(),
+    incrementClaimsCreated: jest.fn(),
     incrementClaimsDisbursed: jest.fn(),
     incrementClaimsVerified: jest.fn(),
     incrementClaimsApproved: jest.fn(),
