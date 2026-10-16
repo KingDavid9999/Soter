@@ -130,4 +130,3 @@ class TestChangelog:
         for entry in REDACTION_RULESET_CHANGELOG:
             assert entry["summary"]
             assert entry["changes"]
-            

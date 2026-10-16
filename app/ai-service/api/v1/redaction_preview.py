@@ -85,4 +85,3 @@ async def preview_redaction(
         raise HTTPException(
             status_code=500, detail="Failed to generate redaction preview"
         )
-        

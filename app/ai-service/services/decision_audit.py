@@ -462,4 +462,3 @@ def set_store(store: Optional[DecisionAuditStore]) -> None:
 
 def get_store() -> Optional[DecisionAuditStore]:
     return _store
-    
