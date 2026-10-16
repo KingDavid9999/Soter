@@ -67,7 +67,6 @@ class TestVersionPresentOnRedactedOutput:
             REDACTION_RULESET_VERSION
         )
 
-
     def test_preview_endpoint_returns_version_for_text(self, client):
         response = client.post("/v1/ai/redaction/preview", json={"text": TEXT})
         assert response.status_code == 200
@@ -131,3 +130,4 @@ class TestChangelog:
         for entry in REDACTION_RULESET_CHANGELOG:
             assert entry["summary"]
             assert entry["changes"]
+            
