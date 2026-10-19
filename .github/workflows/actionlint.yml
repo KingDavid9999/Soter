@@ -32,10 +32,12 @@ jobs:
       - name: Run actionlint
         # Fails the job on any workflow error (e.g. invalid YAML structure,
         # secrets in `if:`) so it is caught before merge (#1399).
-        # The ignore below covers a pre-existing "runner too old" notice for
-        # actions/setup-python@v4 in other workflows; remove it once those are
-        # bumped.
+        # The ignores below cover pre-existing notices in other workflows
+        # (setup-python@v4 runner age, SC2034 in backend-ci.yml, SC2044 in
+        # frontend-ci.yml). Remove each once the underlying workflow is fixed.
         run: |
           /tmp/actionlint -color \
-            -ignore 'the runner of "actions/setup-python@v4" action is too old'
+            -ignore 'the runner of "actions/setup-python@v4" action is too old' \
+            -ignore 'SC2034:warning:1:1: i appears unused' \
+            -ignore 'SC2044:warning:2:12: For loops over find output are fragile'
             
